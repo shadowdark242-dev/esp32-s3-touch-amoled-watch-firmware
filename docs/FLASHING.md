@@ -1,41 +1,99 @@
 # Flashing instructions
 
-This guide describes the general workflow for flashing `S3Watch_flash.bin` with ESP Flash Download Tool.
+This guide explains how to install `S3Watch_flash.bin` using Espressif Flash Download Tool.
 
 ## Before you start
 
-- Waveshare ESP32-S3-Touch-AMOLED-2.06 board
+You will need:
+
+- Waveshare ESP32-S3-Touch-AMOLED-2.06 watch development board
 - USB data cable
-- ESP Flash Download Tool
-- `S3Watch_flash.bin` from the matching GitHub release
+- Espressif Flash Download Tool
+- Firmware file: `S3Watch_flash.bin`
 
-Use a cable that supports data, not charging only.
+Download the firmware from the **Assets** section of the latest GitHub Release.
 
-## Important: flash settings
+Download Flash Download Tool from the [official Espressif tools page](https://www.espressif.com/en/support/download/other-tools).
 
-The correct flash address and other settings depend on the exact firmware build.
+## 1. Connect the watch
 
-**Use the address and settings explicitly provided in the release notes or in a configuration file included with that release. Do not guess them.** If no address or settings are provided, stop and ask the firmware maintainer before flashing.
+1. Connect the watch to your computer with a USB data cable.
+2. Open Windows Device Manager.
+3. Find the new COM port and note its number.
 
-## General procedure
+If no COM port appears, try another USB cable or check whether the required USB-UART driver is installed.
 
-1. Download `S3Watch_flash.bin` from the release's **Assets** section.
-2. Start ESP Flash Download Tool.
-3. Select the ESP32-S3 target if the tool asks for the chip.
-4. Add the downloaded `S3Watch_flash.bin` to the file list.
-5. Enter the flash address and select other options exactly as specified for that release.
-6. Connect the watch to the computer with a USB data cable.
-7. Select the correct serial port.
-8. Start the flashing process and wait for the tool to report success.
-9. Disconnect or restart the board as appropriate for the tool and board.
-10. Check that the watch starts and that the expected features work.
+## 2. Open Flash Download Tool
 
-## If flashing fails
+Start Flash Download Tool.
 
-- Confirm that the USB cable supports data.
-- Check that the selected serial port belongs to the connected board.
-- Close other programs that may be using the serial port.
-- Recheck the chip selection and the release-specific flash settings.
-- Do not try random flash addresses or settings.
+Select these options:
 
-If the problem continues, open a GitHub issue and include the release version, the error message, and the steps that led to the failure. Do not include private information.
+- **ChipType:** `ESP32-S3`
+- **WorkMode:** `Develop`
+
+Click **OK**.
+
+## 3. Select the firmware file
+
+In the file list:
+
+1. Click the file selection field in the first row.
+2. Select `S3Watch_flash.bin`.
+3. Enter `0x0` in the address field next to it.
+4. Check the box at the left of that row to enable the file.
+
+Use this single firmware file. Do not add the old file name `S3Watch_merged.bin`.
+
+## 4. Set the flashing options
+
+Set the options on the right:
+
+- **SPI SPEED:** `40MHz`
+- **SPI MODE:** `DIO`
+- **COM:** the port identified in Step 1
+- **BAUD:** `115200` or `460800`
+
+You can try `460800` for a faster flash. If flashing fails, select `115200` and try again.
+
+If you have previously flashed this same watch with the tool, you can use the same settings that worked before.
+
+## 5. Flash the firmware
+
+1. Double-check the selected file, address, COM port, and settings.
+2. Click **START**.
+3. Wait until the tool reports `FINISH`.
+
+Do not disconnect the watch while flashing is in progress.
+
+## 6. Restart and check the watch
+
+When flashing is complete:
+
+1. Disconnect and reconnect the watch, or press its reset button if available.
+2. Wait for the watch to start.
+3. Check that the display and expected firmware features work.
+
+## Troubleshooting
+
+### “Failed to connect”
+
+Try holding the board's **BOOT** button while clicking **START**. Release it a second or two after flashing begins.
+
+### COM port not found
+
+Check Windows Device Manager. A USB-UART driver may be required, depending on the board and USB interface.
+
+### Flashing freezes or fails partway through
+
+- Try a lower baud rate: `115200`.
+- Try a shorter or better-quality USB cable.
+- Check that no other program is using the COM port.
+
+If the problem continues, note the exact error message and the settings used.
+
+## Important
+
+Use this firmware only with the intended Waveshare ESP32-S3-Touch-AMOLED-2.06 board. Flashing custom firmware may erase existing data or affect device behavior.
+
+The firmware source code is not currently published.
