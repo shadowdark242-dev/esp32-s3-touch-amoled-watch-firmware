@@ -1,0 +1,6 @@
+# Put this file in the root of the SD card as /sdcard/wifi.txt
+# Format: SSID;PASSWORD (one network per line)
+# Lines starting with # and empty lines are ignored.
+# The first network in the list is the main one; if she is not within range,
+# the clock will switch to the next one after several unsuccessful attempts.
+
