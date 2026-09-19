@@ -2,139 +2,112 @@
 
 Custom firmware for the **Waveshare ESP32-S3-Touch-AMOLED-2.06** smartwatch development board.
 
-This project provides a ready-to-flash firmware build with custom watch functionality and additional customization options.
+This project provides a ready-to-flash firmware build with additional features and customization options for the watch.
 
-## Features
+## ✨ Features
 
-- Custom watch interface
+- Custom smartwatch interface
 - Touchscreen support
 - AMOLED display support
-- Wi-Fi configuration
-- Custom watch wallpapers
+- Wi-Fi functionality
+- Custom wallpapers
 - Wallpaper conversion tool
-- SD card based wallpaper configuration
-- Firmware updates using Espressif Flash Download Tool
+- Additional watch customization
+- Optimized firmware for the Waveshare ESP32-S3-Touch-AMOLED-2.06
 
-## Supported device
+> More detailed information about the available features and firmware behavior can be found in the documentation.
+
+## 📱 Supported device
 
 **Waveshare ESP32-S3-Touch-AMOLED-2.06**
 
-The firmware is intended for this board.
+The firmware is intended specifically for this board.
 
-## Download
+## 📥 Download
 
-The firmware is **free to download and use**.
+The firmware is completely **free**.
 
-Download the latest firmware from the **Releases** section:
+Download the latest release from the GitHub Releases page:
 
-**[Download the latest release](../../releases/latest)**
+**[Download the latest firmware](../../releases/latest)**
 
-Firmware file:
+The firmware file is:
 
 ```text
 S3Watch_flash.bin
-```
+You do not need the source code to install or use the firmware.
 
-## Installation
+🔧 Installation
 
-The firmware is installed using **Espressif Flash Download Tool**.
+The firmware can be installed using Espressif Flash Download Tool.
 
-See:
+See the complete installation guide:
 
-**[Flashing instructions](docs/FLASHING.md)**
+📖 Flashing instructions
 
-Current flashing settings:
+The current firmware uses:
 
-- Chip: `ESP32-S3`
-- Work mode: `Develop`
-- Firmware address: `0x0`
-- SPI mode: `DIO`
-- SPI speed: `40MHz`
-- Baud rate: `115200` or `460800`
+Chip: ESP32-S3
+Work mode: Develop
+Firmware address: 0x0
+SPI Mode: DIO
+SPI Speed: 40MHz
+Baud rate: 115200 or 460800
+🖼️ Custom wallpapers
 
-## Custom wallpapers
+The firmware supports custom wallpapers.
 
-The watch can load a custom wallpaper from the SD card.
+You can prepare wallpapers using the included conversion tool:
 
-The wallpaper file must be named:
-
-```text
-wall.bin
-```
-
-and placed in the **root** of the SD card.
-
-A Python conversion script is included in this repository:
-
-```text
 convert_wallpaper.py
-```
 
-The converter prepares an image for the watch display at **410 × 502 pixels** and converts it to the required RGB565 format.
+Detailed instructions:
 
-See:
+🖼️ Wallpaper guide
 
-**[Wallpaper instructions](docs/WALLPAPER.md)**
+📶 Wi-Fi configuration
 
-## Wi-Fi configuration
+Wi-Fi can be configured using the procedure described in the documentation.
 
-Wi-Fi networks can be configured using a `wifi.txt` file on the root of the SD card.
+📶 Wi-Fi setup guide
 
-Format:
+📚 Documentation
+Guide	Description
+Flashing	Install the firmware using Flash Download Tool
+Wallpapers	Create and install custom wallpapers
+Wi-Fi	Configure Wi-Fi
+Changelog	Firmware release history
+🧩 Source code
 
-```text
-SSID;PASSWORD
-```
+The firmware source code is not currently published.
 
-One network can be specified per line.
+Only the compiled firmware releases are provided at this time.
 
-See:
+💾 Firmware
+File	Description
+S3Watch_flash.bin	Compiled firmware for ESP32-S3-Touch-AMOLED-2.06
+⚠️ Important
 
-**[Wi-Fi instructions](docs/WIFI.md)**
+This firmware is intended for the Waveshare ESP32-S3-Touch-AMOLED-2.06 board.
 
-## Documentation
+Do not flash it to a different device unless compatibility has been confirmed.
 
-| Document | Description |
-|---|---|
-| [Flashing instructions](docs/FLASHING.md) | Install the firmware using Flash Download Tool |
-| [Wallpaper instructions](docs/WALLPAPER.md) | Create and install custom wallpapers |
-| [Wi-Fi instructions](docs/WIFI.md) | Configure Wi-Fi using the SD card |
-| [Changelog](CHANGELOG.md) | Firmware release history |
+Flashing custom firmware can erase existing data or change the behavior of the device. Follow the installation instructions carefully.
 
-## Source code
+❤️ Support the project
 
-The firmware source code is **not currently published**.
+The firmware is free to download and use.
 
-Only the compiled firmware is provided publicly at this time.
+If you find the project useful and would like to support its development, you can optionally support the developer on Gumroad:
 
-## Firmware
+☕ Support the project on Gumroad
 
-| File | Description |
-|---|---|
-| `S3Watch_flash.bin` | Compiled firmware for Waveshare ESP32-S3-Touch-AMOLED-2.06 |
+Support is completely voluntary. The firmware remains free.
 
-## Important
-
-This firmware is intended for the **Waveshare ESP32-S3-Touch-AMOLED-2.06** board.
-
-Do not flash it to another device unless compatibility has been confirmed.
-
-Flashing custom firmware can erase existing data or change the behavior of the device. Follow the flashing instructions carefully.
-
-## Support the project
-
-The firmware is free.
-
-If you find it useful and would like to support development, you can optionally support the developer on Gumroad:
-
-**[Support the project on Gumroad](https://shadowcaster304.gumroad.com/l/vcynfp)**
-
-Support is voluntary. The firmware remains free.
-
-## License
+📄 License
 
 License information will be added later.
 
-## Changelog
+📋 Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for the release history.
+See the CHANGELOG.md file for release history.
