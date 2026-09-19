@@ -33,17 +33,16 @@ Download the latest release from the GitHub Releases page:
 
 The firmware file is:
 
-```text
 S3Watch_flash.bin
 You do not need the source code to install or use the firmware.
 
-🔧 Installation
+## 🔧 Installation
 
 The firmware can be installed using Espressif Flash Download Tool.
 
 See the complete installation guide:
 
-📖 Flashing instructions
+## 📖 Flashing instructions
 
 The current firmware uses:
 
@@ -53,7 +52,7 @@ Firmware address: 0x0
 SPI Mode: DIO
 SPI Speed: 40MHz
 Baud rate: 115200 or 460800
-🖼️ Custom wallpapers
+## 🖼️ Custom wallpapers
 
 The firmware supports custom wallpapers.
 
@@ -63,30 +62,25 @@ convert_wallpaper.py
 
 Detailed instructions:
 
-🖼️ Wallpaper guide
+## 🖼️ Wallpaper guide
 
-📶 Wi-Fi configuration
+## 📶 Wi-Fi configuration
 
 Wi-Fi can be configured using the procedure described in the documentation.
 
-📶 Wi-Fi setup guide
+## 📶 Wi-Fi setup guide
 
-📚 Documentation
+## 📚 Documentation
 Guide	Description
 Flashing	Install the firmware using Flash Download Tool
 Wallpapers	Create and install custom wallpapers
 Wi-Fi	Configure Wi-Fi
 Changelog	Firmware release history
-🧩 Source code
 
-The firmware source code is not currently published.
-
-Only the compiled firmware releases are provided at this time.
-
-💾 Firmware
+## 💾 Firmware
 File	Description
 S3Watch_flash.bin	Compiled firmware for ESP32-S3-Touch-AMOLED-2.06
-⚠️ Important
+## ⚠️ Important
 
 This firmware is intended for the Waveshare ESP32-S3-Touch-AMOLED-2.06 board.
 
@@ -94,20 +88,20 @@ Do not flash it to a different device unless compatibility has been confirmed.
 
 Flashing custom firmware can erase existing data or change the behavior of the device. Follow the installation instructions carefully.
 
-❤️ Support the project
+## ❤️ Support the project
 
 The firmware is free to download and use.
 
 If you find the project useful and would like to support its development, you can optionally support the developer on Gumroad:
 
-☕ Support the project on Gumroad
+## ☕ Support the project on Gumroad
 
 Support is completely voluntary. The firmware remains free.
 
-📄 License
+## 📄 License
 
 License information will be added later.
 
-📋 Changelog
+## 📋 Changelog
 
 See the CHANGELOG.md file for release history.
