@@ -46,12 +46,12 @@ See the complete installation guide:
 
 The current firmware uses:
 
-Chip: ESP32-S3
-Work mode: Develop
-Firmware address: 0x0
-SPI Mode: DIO
-SPI Speed: 40MHz
-Baud rate: 115200 or 460800
+- Chip: ESP32-S3
+- Work mode: Develop
+- Firmware address: 0x0
+- SPI Mode: DIO
+- SPI Speed: 40MHz
+- Baud rate: 115200 or 460800
 ## 🖼️ Custom wallpapers
 
 The firmware supports custom wallpapers.
