@@ -92,8 +92,6 @@ Flashing custom firmware can erase existing data or change the behavior of the d
 
 The firmware is free to download and use.
 
-If you find the project useful and would like to support its development, you can optionally support the developer on Gumroad:
-
 ## ☕ Support the project on Gumroad
 
 Support is completely voluntary. The firmware remains free.
